@@ -4,7 +4,12 @@ import os.path as osp
 
 from mmcv.runner import get_time_str, init_dist
 
-from datsr.data import create_dataloader, create_dataset
+import sys
+
+# Add the directory you want to the Python search path
+sys.path.append('D:\\datsr')
+
+from data import create_dataloader, create_dataset
 from datsr.models import create_model
 from datsr.utils import get_root_logger, make_exp_dirs
 from datsr.utils.options import dict2str, dict_to_nonedict, parse

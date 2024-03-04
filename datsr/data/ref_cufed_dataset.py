@@ -4,8 +4,8 @@ import numpy as np
 import torch.utils.data as data
 from PIL import Image
 
-from datsr.data.transforms import augment, mod_crop, totensor, random_crop
-from datsr.data.util import (paired_paths_from_ann_file, paired_paths_from_folder, paired_paths_from_lmdb)
+from data.transforms import augment, mod_crop, totensor, random_crop
+from data.util import (paired_paths_from_ann_file, paired_paths_from_folder, paired_paths_from_lmdb)
 from datsr.utils import FileClient
 import torchvision.transforms as T
 import os

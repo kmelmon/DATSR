@@ -8,20 +8,30 @@ gpu_ids: [0]
 
 datasets:
 
-  test_0:
-    name: val_CUFED
+  #test_0:
+   # name: val_CUFED
+   # type: RefCUFEDDataset
+   # dataroot_in: data/CUFED/test/CUFED5
+   # dataroot_ref: data/CUFED/test/CUFED5
+   # io_backend:
+   #   type: disk
+   # bicubic_model: PIL
+   # ann_file: ./datasets/CUFED5_pairs.txt
+  # use_ColorJitter: true
+
+  test_1:
+    name: WR-SR
     type: RefCUFEDDataset
-    dataroot_in: data/CUFED/test/CUFED5
-    dataroot_ref: data/CUFED/test/CUFED5
+    dataroot_in: ./datasets/WR-SR/input
+    dataroot_ref: ./datasets/WR-SR/ref
     io_backend:
       type: disk
     bicubic_model: PIL
-    ann_file: ./datasets/CUFED5_pairs.txt
-  # use_ColorJitter: true
 
+    ann_file: ./datasets/WR-SR_pairs.txt
 
 val_func: BasicSRValidation
-save_img:  false # true #
+save_img:  true
 
 #### network structures
 network_g:
